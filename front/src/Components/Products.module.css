@@ -1,0 +1,22 @@
+.productList {
+    align-items: center;
+    align-content: space-between;
+    /*justify-content: space-between;*/
+}
+
+.product{
+    width: 23%;
+    height: 130px;
+    border: 2px solid black;
+    padding: 20px 0 0 0;
+    text-align: center;
+    display: inline-block;
+    /*margin-right: 2%;*/
+    margin: 15px 0 0 15px;
+    position: relative;;
+
+}
+.Mass{
+    display: flex;
+    justify-content: right;
+}
