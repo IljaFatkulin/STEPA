@@ -1,20 +1,27 @@
 import React from 'react';
 import './styles/App.css';
-import GetProducts from "./Components/GetProducts";
-import classes from "./Components/Products.module.css";
-import Products from "./Components/Products";
+
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Products from "./pages/Products";
+import AddProduct from "./pages/AddProduct";
 
 function App() {
 
 
 
   return (
-    <div className="App">
+      <div className='App'>
+        <BrowserRouter >
+
+         <Routes>
+
+                <Route path="/" element={<Products/>}/>
+                <Route path="/addproduct" element={<AddProduct/>}/>
+         </Routes>
 
 
-        <hr/>
-        <GetProducts/>
-    </div>
+        </BrowserRouter>
+      </div>
   );
 }
 

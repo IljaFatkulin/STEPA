@@ -3,18 +3,19 @@ import classes from "./Products.module.css";
 import axios from "axios";
 
 
-const Products = ({id,name,sku,price,productType,...props}) => {
+const ProductsList = ({id,name,sku,price,productType,dimension,size,weight,...props}) => {
     if (id != null) {
         return (
 
             <div className={classes.product} key = {id}>
-
+                <input className='delete-checkbox' type="checkbox" {...props} />
                 <h5>{sku}</h5>
                 <p>{name}</p>
                 <p>{price}</p>
                 <p>{productType}</p>
+                <p>{dimension}{size}{weight}</p>
                 {/*<button onClick={deleteProduct}>Delete</button>*/}
-                <input type="checkbox" {...props} />
+
             </div>
         );
     }
@@ -26,4 +27,4 @@ const Products = ({id,name,sku,price,productType,...props}) => {
 
 };
 
-export default Products;
+export default ProductsList;
