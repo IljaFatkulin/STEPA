@@ -24,7 +24,7 @@ class API
                 $request_body=file_get_contents('php://input');
                 $data=json_decode($request_body,true);
                 $setDB=new SetDB();
-                $setDB->addProduct($data['sku'],$data['name'],$data['price'],$data['productType']);
+                $setDB->addProduct($data);
                  break;
 
             case "DELETE":
