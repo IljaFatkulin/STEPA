@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import classes from "./Products.module.css";
-import axios from "axios";
+import classes from "../styles/main.module.css"
+
 
 
 const ProductsList = ({id,name,sku,price,productType,dimension,size,weight,...props}) => {

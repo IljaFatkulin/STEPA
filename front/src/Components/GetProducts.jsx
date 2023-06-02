@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import ProductsList from "./ProductsList";
-import classes from "./Products.module.css";
+//import classes from "./Products.module.css";
+import classes from "../styles/main.module.css"
 import {Link} from "react-router-dom";
 
 const GetProducts = function () {
@@ -37,7 +38,8 @@ return (
         <header>
             <h1>Product list</h1>
             <div className={classes.buttons}>
-                <button><Link to='/addproduct'>ADD</Link></button>&nbsp;&nbsp;&nbsp;
+                <button ><Link to='/addproduct'>ADD</Link></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                 <button id="delete-product-btn" onClick={deleteProducts}>MASS DELETE</button>
             </div>
             <hr/>

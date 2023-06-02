@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import axios from "axios";
 import Select from "./Select";
-import products from "./ProductsList";
-import classes from "./Products.module.css";
+import classes from "../styles/main.module.css"
 import {Link} from "react-router-dom";
 
 const PostProduct = () => {
@@ -12,8 +11,23 @@ const PostProduct = () => {
         e.preventDefault();
         if (product.sku !=='' && product.name !==''  && product.price !=='' &&   product.productType!=='')
         {
-            postProducts();
+            switch (product.productType) {
+                case 'book':
+                    if (product.weight!=='')
+                        postProducts();
+                    break;
+                case 'dvd':
+                    if (product.size!=='')
+                        postProducts();
+                    break;
+                case 'furniture':
+                    if (product.height&&product.weight&&product.length !=='')
+                        postProducts();
+                    break;
+
+            }
         }
+
 
     }
     function postProducts() {
